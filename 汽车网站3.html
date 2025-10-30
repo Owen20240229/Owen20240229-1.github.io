@@ -1,0 +1,2068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Professional car export dealer with direct supply channels, professional foreign trade service team, competitive prices, and safe shipping channels. We offer a wide range of popular car models for export worldwide.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025 Auto Sales - Premium car export solutions</title>
+    <!-- Tailwind CSS v3 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.8/dist/chart.umd.min.js"></script>
+    <!-- AOS Animation Library -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <!-- Three.js -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/controls/OrbitControls.js"></script>
+    
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0F3460',
+                        secondary: '#16213E',
+                        accent: '#E94560',
+                        light: '#F5F5F5',
+                        dark: '#333333'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 1s ease-in-out',
+                        'slide-up': 'slideUp 0.5s ease-in-out',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-shadow {
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            }
+            .glass-effect {
+                background: rgba(15, 52, 96, 0.7);
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
+            }
+            .card-hover {
+                transition: all 0.3s ease;
+            }
+            .card-hover:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            }
+            .gradient-overlay {
+                background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
+            }
+            .btn-primary {
+                @apply bg-primary hover:bg-secondary text-white px-6 py-3 rounded-full transition-all duration-300 transform hover:scale-105;
+            }
+            .btn-secondary {
+                @apply bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white px-6 py-3 rounded-full transition-all duration-300;
+            }
+            .section-padding {
+                @apply py-20;
+            }
+            .section-title {
+                @apply text-3xl md:text-4xl font-bold text-primary mb-4;
+            }
+            .section-subtitle {
+                @apply text-gray-600 max-w-2xl mx-auto;
+            }
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800">
+    <!-- 导航栏 -->
+    <header id="navbar" class="fixed w-full z-50 glass-effect transition-all duration-300">
+        <div class="container mx-auto px-4 py-4">
+            <nav class="flex justify-between items-center">
+                <!-- Logo -->
+                <a href="#" class="text-2xl font-bold text-white">
+                    Auto<span class="text-accent">Elite</span>
+                </a>
+                
+                <!-- 桌面导航 -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#" class="text-white hover:text-accent transition-colors">Home</a>
+                    <a href="#models" class="text-white hover:text-accent transition-colors">Popular Models</a>
+                    <a href="#brands" class="text-white hover:text-accent transition-colors">Brands</a>
+                    <a href="#export-services" class="text-white hover:text-accent transition-colors">Export Services</a>
+                    <a href="#ai-recommend" class="text-white hover:text-accent transition-colors">AI Recommendation</a>
+                    <a href="#contact" class="text-white hover:text-accent transition-colors">Contact Us</a>
+                </div>
+                
+                <!-- 移动端汉堡菜单 -->
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-white focus:outline-none">
+                        <i class="fa fa-bars text-2xl"></i>
+                    </button>
+                </div>
+                
+                <!-- 用户操作按钮 -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <button class="text-white hover:text-accent transition-colors">
+                        <i class="fa fa-search text-xl"></i>
+                    </button>
+                    <button class="text-white hover:text-accent transition-colors">
+                        <i class="fa fa-globe text-xl"></i>
+                    </button>
+                    <button class="text-white hover:text-accent transition-colors">
+                        <i class="fa fa-user text-xl"></i>
+                    </button>
+                    <button class="bg-accent hover:bg-red-600 text-white px-4 py-2 rounded-full transition-colors">
+                        Get Quote
+                    </button>
+                </div>
+            </nav>
+            
+            <!-- 移动端菜单 -->
+            <div id="mobile-menu" class="hidden md:hidden bg-secondary">
+                <div class="container mx-auto px-4 py-4 flex flex-col space-y-4">
+                    <a href="#" class="text-white hover:text-accent transition-colors">Home</a>
+                    <a href="#models" class="text-white hover:text-accent transition-colors">Popular Models</a>
+                    <a href="#brands" class="text-white hover:text-accent transition-colors">Brands</a>
+                    <a href="#export-services" class="text-white hover:text-accent transition-colors">Export Services</a>
+                    <a href="#ai-recommend" class="text-white hover:text-accent transition-colors">AI Recommendation</a>
+                    <a href="#contact" class="text-white hover:text-accent transition-colors">Contact Us</a>
+                    <div class="flex items-center space-x-4">
+                        <button class="text-white hover:text-accent transition-colors">
+                            <i class="fa fa-search text-xl"></i>
+                        </button>
+                        <button class="text-white hover:text-accent transition-colors">
+                            <i class="fa fa-globe text-xl"></i>
+                        </button>
+                        <button class="text-white hover:text-accent transition-colors">
+                            <i class="fa fa-user text-xl"></i>
+                        </button>
+                        <button class="bg-accent hover:bg-red-600 text-white px-4 py-2 rounded-full transition-colors">
+                            Get Quote
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- 英雄区域 -->
+    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+        <!-- 背景视频/图片 -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/super_tool/86d6fcaea175427ca6ed609304b73282~tplv-a9rns2rl98-image.image?rcl=20251029222539170D74A36C4F6BB03D60&rk3s=8e244e95&rrcfp=f06b921b&x-expires=1764339975&x-signature=Iq%2BtVjyRgzgQuuGZstRMRWJ0%2FQ4%3D" alt="Luxury Cars" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+        </div>
+        
+        <!-- 内容 -->
+        <div class="container mx-auto px-4 z-10 text-center" data-aos="fade-up">
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 text-shadow">
+                Explore 2025 <span class="text-accent">Premium Car Models</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-white mb-8 max-w-3xl mx-auto text-shadow">
+                Professional car export dealer with direct supply channels and competitive prices
+            </p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="#models" class="bg-accent hover:bg-red-600 text-white px-8 py-3 rounded-full text-lg font-medium transition-colors">
+                    Browse Models
+                </a>
+                <a href="#export-services" class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-primary px-8 py-3 rounded-full text-lg font-medium transition-colors">
+                    Export Services
+                </a>
+            </div>
+        </div>
+        
+        <!-- 向下滚动指示器 -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
+            <i class="fa fa-chevron-down text-2xl"></i>
+        </div>
+    </section>
+    
+    <!-- 特色车型 -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">2025 Featured Models</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Explore this year's most talked-about breakthrough models and experience cutting-edge automotive technology and design</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- 特斯拉Model Y焕新版 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative h-64">
+                        <img src="https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/super_tool/1abe14a2acaa489d8fe25f0411e3e15f~tplv-a9rns2rl98-image.image?rcl=20251029222539170D74A36C4F6BB03D60&rk3s=8e244e95&rrcfp=f06b921b&x-expires=1764339975&x-signature=GnD911TdfT51qThNhR0CV%2BFa6S4%3D" alt="Tesla Model Y Refresh" class="w-full h-full object-cover">
+                        <div class="absolute top-4 right-4 bg-accent text-white text-sm font-bold px-3 py-1 rounded-full">
+                            New Energy
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-xl font-bold text-primary">Tesla Model Y Refresh</h3>
+                            <span class="text-lg font-semibold text-accent">Starting at ¥339,900</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Comprehensive suspension system upgrade, 51% improvement in vibration filtering, 20% reduction in wind noise, 22% reduction in road noise, taking the driving experience to the next level.</p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="bg-gray-200 text-gray-700 text-xs px-2 py-1 rounded">Range 719km</span>
+                            <span class="bg-gray-200 text-gray-700 text-xs px-2 py-1 rounded">0-100km/h 4.3s</span>
+                            <span class="bg-gray-200 text-gray-700 text-xs px-2 py-1 rounded">Autopilot</span>
+                        </div>
+                        <a href="#" class="block text-center bg-primary hover:bg-secondary text-white py-2 rounded-lg transition-colors">
+                            View Details
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 比亚迪唐L -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative h-64">
+                        <img src="https://p26-doubao-search-sign.byteimg.com/tos-cn-i-qvj2lq49k0/09dbc17eebc04ac198b79d2e553097fb~tplv-be4g95zd3a-image.jpeg?rk3s=542c0f93&x-expires=1777299961&x-signature=oc6MO5dGzDxSnzLd6Mm%2F99%25%25fIk%3D" alt="BYD Tang L" class="w-full h-full object-cover">
+                        <div class="absolute top-4 right-4 bg-green-500 text-white text-sm font-bold px-3 py-1 rounded-full">
+                            Hybrid
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-xl font-bold text-primary">BYD Tang L</h3>
+                            <span class="text-lg font-semibold text-accent">Starting at ¥259,800</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">BYD Dynasty series flagship SUV, equipped with fifth-generation DM hybrid technology and super e-platform, a flagship choice that emphasizes both technology and comfort.</p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="bg-gray-200 text-gray-700 text-xs px-2 py-1 rounded">Combined Range 1200km</span>
+                            <span class="bg-gray-200 text-gray-700 text-xs px-2 py-1 rounded">YunNian-C System</span>
+                            <span class="bg-gray-200 text-gray-700 text-xs px-2 py-1 rounded">7-seat Layout</span>
+                        </div>
+                        <a href="#" class="block text-center bg-primary hover:bg-secondary text-white py-2 rounded-lg transition-colors">
+                            View Details
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 迈巴赫S级 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover" data-aos="fade-up" data-aos-delay="300">
+                    <div class="relative h-64">
+                        <img src="https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/super_tool/86d6fcaea175427ca6ed609304b73282~tplv-a9rns2rl98-image.image?rcl=20251029222539170D74A36C4F6BB03D60&rk3s=8e244e95&rrcfp=f06b921b&x-expires=1764339975&x-signature=Iq%2BtVjyRgzgQuuGZstRMRWJ0%2FQ4%3D" alt="Maybach S-Class" class="w-full h-full object-cover">
+                        <div class="absolute top-4 right-4 bg-yellow-500 text-white text-sm font-bold px-3 py-1 rounded-full">
+                            Luxury
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-xl font-bold text-primary">Maybach S-Class</h3>
+                            <span class="text-lg font-semibold text-accent">Starting at ¥1,468,000</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Redefining luxury sedan standards with two-tone body and executive rear seats, perfect fusion of ultimate luxury craftsmanship and leading technology.</p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="bg-gray-200 text-gray-700 text-xs px-2 py-1 rounded">V12 Engine</span>
+                            <span class="bg-gray-200 text-gray-700 text-xs px-2 py-1 rounded">Intelligent Driving</span>
+                            <span class="bg-gray-200 text-gray-700 text-xs px-2 py-1 rounded">Premium Audio</span>
+                        </div>
+                        <a href="#" class="block text-center bg-primary hover:bg-secondary text-white py-2 rounded-lg transition-colors">
+                            View Details
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 热门车型 -->
+    <section id="models" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Popular Models</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Browse the most popular models of various brands in 2025 and find your ideal car</p>
+            </div>
+            
+            <!-- 筛选器 -->
+            <div class="bg-white rounded-xl shadow-lg p-6 mb-10" data-aos="fade-up">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                    <div>
+                        <label class="block text-gray-700 mb-2">Brand</label>
+                        <select class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary">
+                            <option value="">All Brands</option>
+                            <option value="byd">BYD</option>
+                            <option value="tesla">Tesla</option>
+                            <option value="geely">Geely</option>
+                            <option value="bmw">BMW</option>
+                            <option value="mercedes">Mercedes-Benz</option>
+                            <option value="audi">Audi</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-2">Price Range</label>
+                        <select class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary">
+                            <option value="">All Prices</option>
+                            <option value="10-20">¥100,000 - ¥200,000</option>
+                            <option value="20-30">¥200,000 - ¥300,000</option>
+                            <option value="30-50">¥300,000 - ¥500,000</option>
+                            <option value="50-100">¥500,000 - ¥1,000,000</option>
+                            <option value="100+">Above ¥1,000,000</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-2">Body Type</label>
+                        <select class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary">
+                            <option value="">All Types</option>
+                            <option value="sedan">Sedan</option>
+                            <option value="suv">SUV</option>
+                            <option value="mpv">MPV</option>
+                            <option value="sports">Sports Car</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-2">Energy Type</label>
+                        <select class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary">
+                            <option value="">All Types</option>
+                            <option value="electric">Electric</option>
+                            <option value="hybrid">Hybrid</option>
+                            <option value="fuel">Fuel</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="flex justify-center mt-6">
+                    <button id="filter-btn" class="bg-primary hover:bg-secondary text-white px-8 py-3 rounded-full text-lg font-medium transition-colors">
+                        <i class="fa fa-search mr-2"></i>Filter Models
+                    </button>
+                </div>
+            </div>
+            
+            <!-- 车型列表 -->
+            <div id="car-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 极狐阿尔法T5 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative h-56">
+                        <img src="https://p26-doubao-search-sign.byteimg.com/tos-cn-i-qvj2lq49k0/9b54a9e1049b4e22b76e5636f8b708da~tplv-be4g95zd3a-image.jpeg?rk3s=542c0f93&x-expires=1777299961&x-signature=DDyw1u656nyfRyPV1XtX82VqKoo%3D" alt="ARCFOX Alpha T5" class="w-full h-full object-cover">
+                        <div class="absolute top-4 right-4 bg-blue-500 text-white text-sm font-bold px-3 py-1 rounded-full">
+                            Electric
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-xl font-bold text-primary">ARCFOX Alpha T5</h3>
+                            <span class="text-lg font-semibold text-accent">Starting at ¥219,800</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Popular new energy vehicle in the ¥200,000-¥500,000 range, highest cost-performance, long-range smart SUV.</p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="bg-gray-200 text-gray-700 text-xs px-2 py-1 rounded">Range 660km</span>
+                            <span class="bg-gray-200 text-gray-700 text-xs px-2 py-1 rounded">Fast Charge 30min</span>
+                            <span class="bg-gray-200 text-gray-700 text-xs px-2 py-1 rounded">Smart Driving</span>
+                        </div>
+                        <a href="#" class="block text-center bg-primary hover:bg-secondary text-white py-2 rounded-lg transition-colors">
+                            View Details
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 小鹏G6 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative h-56">
+                        <img src="https://p26-doubao-search-sign.byteimg.com/pgc-image/6fd3f2024c824ce78ea6ef96eb20acc0~tplv-be4g95zd3a-image.jpeg?rk3s=542c0f93&x-expires=1777299961&x-signature=VYTYBP4kZwANjw%2F5N8NaPfcvsKc%3D" alt="XPeng G6" class="w-full h-full object-cover">
+                        <div class="absolute top-4 right-4 bg-blue-500 text-white text-sm font-bold px-3 py-1 rounded-full">
+                            Electric
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-xl font-bold text-primary">XPeng G6</h3>
+                            <span class="text-lg font-semibold text-accent">Starting at ¥269,900</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">SEPA 2.0 "Fuyao" full-domain 800V architecture, XNGP intelligent assisted driving system.</p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="bg-gray-200 text-gray-700 text-xs px-2 py-1 rounded">Range 700km</span>
+                            <span class="bg-gray-200 text-gray-700 text-xs px-2 py-1 rounded">0-100km/h 3.9s</span>
+                            <span class="bg-gray-200 text-gray-700 text-xs px-2 py-1 rounded">XNGP</span>
+                        </div>
+                        <a href="#" class="block text-center bg-primary hover:bg-secondary text-white py-2 rounded-lg transition-colors">
+                            View Details
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 问界M7 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover" data-aos="fade-up" data-aos-delay="300">
+                    <div class="relative h-56">
+                        <img src="https://p3-doubao-search-sign.byteimg.com/mosaic-legacy/32230003a8780946a7a5~tplv-be4g95zd3a-image.jpeg?rk3s=542c0f93&x-expires=1777299961&x-signature=R1QA1YYiZR1r6KXhrkFEt1kSPOY%3D" alt="AITO M7" class="w-full h-full object-cover">
+                        <div class="absolute top-4 right-4 bg-green-500 text-white text-sm font-bold px-3 py-1 rounded-full">
+                            Hybrid
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-xl font-bold text-primary">AITO M7</h3>
+                            <span class="text-lg font-semibold text-accent">Starting at ¥319,800</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Deeply empowered by Huawei, HarmonyOS intelligent cockpit, super intelligent driving system, luxurious and comfortable.</p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="bg-gray-200 text-gray-700 text-xs px-2 py-1 rounded">Combined Range 1200km</span>
+                            <span class="bg-gray-200 text-gray-700 text-xs px-2 py-1 rounded">HarmonyOS Cockpit</span>
+                            <span class="bg-gray-200 text-gray-700 text-xs px-2 py-1 rounded">Smart Driving</span>
+                        </div>
+                        <a href="#" class="block text-center bg-primary hover:bg-secondary text-white py-2 rounded-lg transition-colors">
+                            View Details
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 理想L7 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative h-56">
+                        <img src="https://p26-doubao-search-sign.byteimg.com/tos-cn-i-qvj2lq49k0/09dbc17eebc04ac198b79d2e553097fb~tplv-be4g95zd3a-image.jpeg?rk3s=542c0f93&x-expires=1777299961&x-signature=oc6MO5dGzDxSnzLd6Mm%2F99%25%25fIk%3D" alt="Li Auto L7" class="w-full h-full object-cover">
+                        <div class="absolute top-4 right-4 bg-green-500 text-white text-sm font-bold px-3 py-1 rounded-full">
+                            EREV
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-xl font-bold text-primary">Li Auto L7</h3>
+                            <span class="text-lg font-semibold text-accent">Starting at ¥339,800</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Family's first choice SUV, extended-range electric, large space, high comfort, intelligent driving assistance.</p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="bg-gray-200 text-gray-700 text-xs px-2 py-1 rounded">EV Range 210km</span>
+                            <span class="bg-gray-200 text-gray-700 text-xs px-2 py-1 rounded">5-seat Layout</span>
+                            <span class="bg-gray-200 text-gray-700 text-xs px-2 py-1 rounded">Smart Driving</span>
+                        </div>
+                        <a href="#" class="block text-center bg-primary hover:bg-secondary text-white py-2 rounded-lg transition-colors">
+                            View Details
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 凯迪拉克CT6 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative h-56">
+                        <img src="https://p11-doubao-search-sign.byteimg.com/tos-cn-i-xv4ileqgde/a278755cf19e4606a9cae20aff0ea583~tplv-be4g95zd3a-image.jpeg?rk3s=542c0f93&x-expires=1777299961&x-signature=ZDH4uqBmMbuZQ4SkPO9Ptc3jax4%3D" alt="Cadillac CT6" class="w-full h-full object-cover">
+                        <div class="absolute top-4 right-4 bg-red-500 text-white text-sm font-bold px-3 py-1 rounded-full">
+                            Fuel
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-xl font-bold text-primary">Cadillac CT6</h3>
+                            <span class="text-lg font-semibold text-accent">Starting at ¥399,700</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Luxury mid-to-large sedan equipped with Super Cruise super intelligent driving system, a model of American luxury.</p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="bg-gray-200 text-gray-700 text-xs px-2 py-1 rounded">2.0T Engine</span>
+                            <span class="bg-gray-200 text-gray-700 text-xs px-2 py-1 rounded">10AT Transmission</span>
+                            <span class="bg-gray-200 text-gray-700 text-xs px-2 py-1 rounded">Super Cruise</span>
+                        </div>
+                        <a href="#" class="block text-center bg-primary hover:bg-secondary text-white py-2 rounded-lg transition-colors">
+                            View Details
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 捷豹F-PACE -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover" data-aos="fade-up" data-aos-delay="300">
+                    <div class="relative h-56">
+                        <img src="https://p11-doubao-search-sign.byteimg.com/labis/aa0a3f0e32dbe2916ddba1b08256bb95~tplv-be4g95zd3a-image.jpeg?rk3s=542c0f93&x-expires=1777299961&x-signature=Ngc03vxVRkOenKh%2BJwrAKfZm4wU%3D" alt="Jaguar F-PACE" class="w-full h-full object-cover">
+                        <div class="absolute top-4 right-4 bg-red-500 text-white text-sm font-bold px-3 py-1 rounded-full">
+                            Fuel
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-xl font-bold text-primary">Jaguar F-PACE</h3>
+                            <span class="text-lg font-semibold text-accent">Starting at ¥456,800</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">British-style sports SUV with excellent handling performance, luxurious interior, and distinctive personality.</p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="bg-gray-200 text-gray-700 text-xs px-2 py-1 rounded">3.0T V6 Engine</span>
+                            <span class="bg-gray-200 text-gray-700 text-xs px-2 py-1 rounded">8AT Transmission</span>
+                            <span class="bg-gray-200 text-gray-700 text-xs px-2 py-1 rounded">All-Wheel Drive</span>
+                        </div>
+                        <a href="#" class="block text-center bg-primary hover:bg-secondary text-white py-2 rounded-lg transition-colors">
+                            View Details
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 加载更多按钮 -->
+            <div class="flex justify-center mt-12">
+                <button id="load-more" class="bg-white border border-primary text-primary hover:bg-primary hover:text-white px-8 py-3 rounded-full text-lg font-medium transition-colors">
+                    Load More Models
+                </button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 品牌专区 -->
+    <section id="brands" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Brand Zone</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Explore world-renowned automotive brands and learn about their history, technology, and latest models</p>
+            </div>
+            
+            <!-- 豪华品牌 -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold text-primary mb-6" data-aos="fade-up">Luxury Brands</h3>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                    <div class="bg-gray-50 rounded-lg p-6 flex flex-col items-center justify-center card-hover" data-aos="fade-up" data-aos-delay="100">
+                        <img src="https://p26-doubao-search-sign.byteimg.com/tos-cn-i-xv4ileqgde/16bb9433bee44f4589970affeb264729~tplv-be4g95zd3a-image.jpeg?rk3s=542c0f93&x-expires=1777299961&x-signature=gUCf1ErPyQV912aGbP8lfveSbIk%3D" alt="Mercedes-Benz" class="h-16 mb-4 object-contain">
+                        <h4 class="text-lg font-semibold text-primary">Mercedes-Benz</h4>
+                    </div>
+                    <div class="bg-gray-50 rounded-lg p-6 flex flex-col items-center justify-center card-hover" data-aos="fade-up" data-aos-delay="200">
+                        <img src="https://p26-doubao-search-sign.byteimg.com/tos-cn-i-xv4ileqgde/16bb9433bee44f4589970affeb264729~tplv-be4g95zd3a-image.jpeg?rk3s=542c0f93&x-expires=1777299961&x-signature=gUCf1ErPyQV912aGbP8lfveSbIk%3D" alt="BMW" class="h-16 mb-4 object-contain">
+                        <h4 class="text-lg font-semibold text-primary">BMW</h4>
+                    </div>
+                    <div class="bg-gray-50 rounded-lg p-6 flex flex-col items-center justify-center card-hover" data-aos="fade-up" data-aos-delay="300">
+                        <img src="https://p26-doubao-search-sign.byteimg.com/tos-cn-i-xv4ileqgde/16bb9433bee44f4589970affeb264729~tplv-be4g95zd3a-image.jpeg?rk3s=542c0f93&x-expires=1777299961&x-signature=gUCf1ErPyQV912aGbP8lfveSbIk%3D" alt="Audi" class="h-16 mb-4 object-contain">
+                        <h4 class="text-lg font-semibold text-primary">Audi</h4>
+                    </div>
+                    <div class="bg-gray-50 rounded-lg p-6 flex flex-col items-center justify-center card-hover" data-aos="fade-up" data-aos-delay="400">
+                        <img src="https://p11-doubao-search-sign.byteimg.com/labis/468d842ac696ae6a631aa3dbab7e1cd6~tplv-be4g95zd3a-image.jpeg?rk3s=542c0f93&x-expires=1777299961&x-signature=2gAmQKwM6uicPCaYuRlryygxEGw%3D" alt="Rolls-Royce" class="h-16 mb-4 object-contain">
+                        <h4 class="text-lg font-semibold text-primary">Rolls-Royce</h4>
+                    </div>
+                    <div class="bg-gray-50 rounded-lg p-6 flex flex-col items-center justify-center card-hover" data-aos="fade-up" data-aos-delay="500">
+                        <img src="https://p11-doubao-search-sign.byteimg.com/labis/468d842ac696ae6a631aa3dbab7e1cd6~tplv-be4g95zd3a-image.jpeg?rk3s=542c0f93&x-expires=1777299961&x-signature=2gAmQKwM6uicPCaYuRlryygxEGw%3D" alt="Bentley" class="h-16 mb-4 object-contain">
+                        <h4 class="text-lg font-semibold text-primary">Bentley</h4>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 新能源品牌 -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold text-primary mb-6" data-aos="fade-up">New Energy Brands</h3>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                    <div class="bg-gray-50 rounded-lg p-6 flex flex-col items-center justify-center card-hover" data-aos="fade-up" data-aos-delay="100">
+                        <img src="https://p26-doubao-search-sign.byteimg.com/tos-cn-i-xv4ileqgde/16bb9433bee44f4589970affeb264729~tplv-be4g95zd3a-image.jpeg?rk3s=542c0f93&x-expires=1777299961&x-signature=gUCf1ErPyQV912aGbP8lfveSbIk%3D" alt="Tesla" class="h-16 mb-4 object-contain">
+                        <h4 class="text-lg font-semibold text-primary">Tesla</h4>
+                    </div>
+                    <div class="bg-gray-50 rounded-lg p-6 flex flex-col items-center justify-center card-hover" data-aos="fade-up" data-aos-delay="200">
+                        <img src="https://p26-doubao-search-sign.byteimg.com/tos-cn-i-xv4ileqgde/16bb9433bee44f4589970affeb264729~tplv-be4g95zd3a-image.jpeg?rk3s=542c0f93&x-expires=1777299961&x-signature=gUCf1ErPyQV912aGbP8lfveSbIk%3D" alt="BYD" class="h-16 mb-4 object-contain">
+                        <h4 class="text-lg font-semibold text-primary">BYD</h4>
+                    </div>
+                    <div class="bg-gray-50 rounded-lg p-6 flex flex-col items-center justify-center card-hover" data-aos="fade-up" data-aos-delay="300">
+                        <img src="https://p26-doubao-search-sign.byteimg.com/tos-cn-i-xv4ileqgde/16bb9433bee44f4589970affeb264729~tplv-be4g95zd3a-image.jpeg?rk3s=542c0f93&x-expires=1777299961&x-signature=gUCf1ErPyQV912aGbP8lfveSbIk%3D" alt="NIO" class="h-16 mb-4 object-contain">
+                        <h4 class="text-lg font-semibold text-primary">NIO</h4>
+                    </div>
+                    <div class="bg-gray-50 rounded-lg p-6 flex flex-col items-center justify-center card-hover" data-aos="fade-up" data-aos-delay="400">
+                        <img src="https://p26-doubao-search-sign.byteimg.com/tos-cn-i-xv4ileqgde/16bb9433bee44f4589970affeb264729~tplv-be4g95zd3a-image.jpeg?rk3s=542c0f93&x-expires=1777299961&x-signature=gUCf1ErPyQV912aGbP8lfveSbIk%3D" alt="XPeng" class="h-16 mb-4 object-contain">
+                        <h4 class="text-lg font-semibold text-primary">XPeng</h4>
+                    </div>
+                    <div class="bg-gray-50 rounded-lg p-6 flex flex-col items-center justify-center card-hover" data-aos="fade-up" data-aos-delay="500">
+                        <img src="https://p26-doubao-search-sign.byteimg.com/tos-cn-i-xv4ileqgde/16bb9433bee44f4589970affeb264729~tplv-be4g95zd3a-image.jpeg?rk3s=542c0f93&x-expires=1777299961&x-signature=gUCf1ErPyQV912aGbP8lfveSbIk%3D" alt="Li Auto" class="h-16 mb-4 object-contain">
+                        <h4 class="text-lg font-semibold text-primary">Li Auto</h4>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 合资品牌 -->
+            <div>
+                <h3 class="text-2xl font-bold text-primary mb-6" data-aos="fade-up">Joint Venture Brands</h3>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                    <div class="bg-gray-50 rounded-lg p-6 flex flex-col items-center justify-center card-hover" data-aos="fade-up" data-aos-delay="100">
+                        <img src="https://p11-doubao-search-sign.byteimg.com/pgc-image/1523109727242f15be7ee83~tplv-be4g95zd3a-image.jpeg?rk3s=542c0f93&x-expires=1777299961&x-signature=TubyiK6un%2FNUrmRL1hCqRfGrlRQ%3D" alt="Toyota" class="h-16 mb-4 object-contain">
+                        <h4 class="text-lg font-semibold text-primary">Toyota</h4>
+                    </div>
+                    <div class="bg-gray-50 rounded-lg p-6 flex flex-col items-center justify-center card-hover" data-aos="fade-up" data-aos-delay="200">
+                        <img src="https://p11-doubao-search-sign.byteimg.com/pgc-image/1523109727242f15be7ee83~tplv-be4g95zd3a-image.jpeg?rk3s=542c0f93&x-expires=1777299961&x-signature=TubyiK6un%2FNUrmRL1hCqRfGrlRQ%3D" alt="Honda" class="h-16 mb-4 object-contain">
+                        <h4 class="text-lg font-semibold text-primary">Honda</h4>
+                    </div>
+                    <div class="bg-gray-50 rounded-lg p-6 flex flex-col items-center justify-center card-hover" data-aos="fade-up" data-aos-delay="300">
+                        <img src="https://p11-doubao-search-sign.byteimg.com/pgc-image/1523109727242f15be7ee83~tplv-be4g95zd3a-image.jpeg?rk3s=542c0f93&x-expires=1777299961&x-signature=TubyiK6un%2FNUrmRL1hCqRfGrlRQ%3D" alt="Nissan" class="h-16 mb-4 object-contain">
+                        <h4 class="text-lg font-semibold text-primary">Nissan</h4>
+                    </div>
+                    <div class="bg-gray-50 rounded-lg p-6 flex flex-col items-center justify-center card-hover" data-aos="fade-up" data-aos-delay="400">
+                        <img src="https://p11-doubao-search-sign.byteimg.com/pgc-image/1523109727242f15be7ee83~tplv-be4g95zd3a-image.jpeg?rk3s=542c0f93&x-expires=1777299961&x-signature=TubyiK6un%2FNUrmRL1hCqRfGrlRQ%3D" alt="Volkswagen" class="h-16 mb-4 object-contain">
+                        <h4 class="text-lg font-semibold text-primary">Volkswagen</h4>
+                    </div>
+                    <div class="bg-gray-50 rounded-lg p-6 flex flex-col items-center justify-center card-hover" data-aos="fade-up" data-aos-delay="500">
+                        <img src="https://p11-doubao-search-sign.byteimg.com/pgc-image/1523109727242f15be7ee83~tplv-be4g95zd3a-image.jpeg?rk3s=542c0f93&x-expires=1777299961&x-signature=TubyiK6un%2FNUrmRL1hCqRfGrlRQ%3D" alt="GM" class="h-16 mb-4 object-contain">
+                        <h4 class="text-lg font-semibold text-primary">GM</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 外贸服务 -->
+    <section id="export-services" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">International Export Services</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">We provide professional car export services with direct supply channels, competitive prices, and safe shipping options</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                <!-- 服务特点1 -->
+                <div class="bg-white rounded-xl shadow-lg p-8 card-hover" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-primary bg-opacity-10 rounded-full p-6 mb-6 inline-block">
+                        <i class="fa fa-truck text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-4">Global Shipping</h3>
+                    <p class="text-gray-600 mb-6">
+                        We offer multiple shipping options including RORO (Roll-on/Roll-off), Container Shipping, and Air Freight to meet your specific needs. Our experienced logistics team ensures safe and timely delivery to any destination worldwide.
+                    </p>
+                    <div class="space-y-3">
+                        <div class="flex items-center">
+                            <i class="fa fa-check text-green-500 mr-2"></i>
+                            <span class="text-gray-700">RORO Shipping</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fa fa-check text-green-500 mr-2"></i>
+                            <span class="text-gray-700">Container Shipping (FCL/LCL)</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fa fa-check text-green-500 mr-2"></i>
+                            <span class="text-gray-700">Air Freight Services</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 服务特点2 -->
+                <div class="bg-white rounded-xl shadow-lg p-8 card-hover" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-primary bg-opacity-10 rounded-full p-6 mb-6 inline-block">
+                        <i class="fa fa-file-text-o text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-4">Customs & Documentation</h3>
+                    <p class="text-gray-600 mb-6">
+                        Our professional team handles all customs clearance procedures and documentation requirements, including export declarations, certificates of origin, and other necessary paperwork to ensure smooth customs clearance at destination.
+                    </p>
+                    <div class="space-y-3">
+                        <div class="flex items-center">
+                            <i class="fa fa-check text-green-500 mr-2"></i>
+                            <span class="text-gray-700">Export Declaration</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fa fa-check text-green-500 mr-2"></i>
+                            <span class="text-gray-700">Certificate of Origin</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fa fa-check text-green-500 mr-2"></i>
+                            <span class="text-gray-700">Customs Clearance</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 服务特点3 -->
+                <div class="bg-white rounded-xl shadow-lg p-8 card-hover" data-aos="fade-up" data-aos-delay="300">
+                    <div class="bg-primary bg-opacity-10 rounded-full p-6 mb-6 inline-block">
+                        <i class="fa fa-credit-card text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-4">Flexible Payment Terms</h3>
+                    <p class="text-gray-600 mb-6">
+                        We offer various international payment options to facilitate your transactions, including T/T (Telegraphic Transfer), L/C (Letter of Credit), and other secure payment methods tailored to your business needs.
+                    </p>
+                    <div class="space-y-3">
+                        <div class="flex items-center">
+                            <i class="fa fa-check text-green-500 mr-2"></i>
+                            <span class="text-gray-700">T/T (Telegraphic Transfer)</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fa fa-check text-green-500 mr-2"></i>
+                            <span class="text-gray-700">L/C (Letter of Credit)</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fa fa-check text-green-500 mr-2"></i>
+                            <span class="text-gray-700">Secure Escrow Services</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 贸易术语解释 -->
+            <div class="bg-white rounded-xl shadow-lg p-8 mb-16" data-aos="fade-up">
+                <h3 class="text-2xl font-bold text-primary mb-6">Understanding Incoterms</h3>
+                <p class="text-gray-600 mb-8">
+                    We support various international trade terms to provide flexibility in our business relationships. Here are some commonly used terms:
+                </p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- FOB -->
+                    <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
+                        <h4 class="text-lg font-semibold text-primary mb-3">FOB (Free On Board)</h4>
+                        <p class="text-gray-600 mb-4">
+                            Seller delivers goods on board the vessel nominated by the buyer at the named port of shipment. Risk transfers when goods cross the ship's rail.
+                        </p>
+                        <div class="space-y-2">
+                            <div class="flex items-start">
+                                <i class="fa fa-circle text-xs text-primary mt-1 mr-2"></i>
+                                <span class="text-gray-700">Seller loads goods on board</span>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fa fa-circle text-xs text-primary mt-1 mr-2"></i>
+                                <span class="text-gray-700">Buyer arranges main transport</span>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fa fa-circle text-xs text-primary mt-1 mr-2"></i>
+                                <span class="text-gray-700">Risk transfers at ship's rail</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- CIF -->
+                    <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
+                        <h4 class="text-lg font-semibold text-primary mb-3">CIF (Cost, Insurance and Freight)</h4>
+                        <p class="text-gray-600 mb-4">
+                            Seller delivers goods on board the vessel and pays for insurance and freight to the named port of destination. Risk transfers at ship's rail.
+                        </p>
+                        <div class="space-y-2">
+                            <div class="flex items-start">
+                                <i class="fa fa-circle text-xs text-primary mt-1 mr-2"></i>
+                                <span class="text-gray-700">Seller pays freight and insurance</span>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fa fa-circle text-xs text-primary mt-1 mr-2"></i>
+                                <span class="text-gray-700">Insurance covers minimum cover</span>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fa fa-circle text-xs text-primary mt-1 mr-2"></i>
+                                <span class="text-gray-700">Risk transfers at ship's rail</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- DDP -->
+                    <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
+                        <h4 class="text-lg font-semibold text-primary mb-3">DDP (Delivered Duty Paid)</h4>
+                        <p class="text-gray-600 mb-4">
+                            Seller delivers goods to the buyer at the named place of destination, cleared for import and all duties paid. Maximum responsibility for seller.
+                        </p>
+                        <div class="space-y-2">
+                            <div class="flex items-start">
+                                <i class="fa fa-circle text-xs text-primary mt-1 mr-2"></i>
+                                <span class="text-gray-700">Seller pays all costs to destination</span>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fa fa-circle text-xs text-primary mt-1 mr-2"></i>
+                                <span class="text-gray-700">Seller handles import clearance</span>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fa fa-circle text-xs text-primary mt-1 mr-2"></i>
+                                <span class="text-gray-700">Risk transfers at destination</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 出口流程 -->
+            <div class="bg-white rounded-xl shadow-lg p-8" data-aos="fade-up">
+                <h3 class="text-2xl font-bold text-primary mb-6">Export Process</h3>
+                <div class="relative">
+                    <!-- 连接线 -->
+                    <div class="hidden md:block absolute top-1/2 left-0 w-full h-1 bg-gray-200 -translate-y-1/2 z-0"></div>
+                    
+                    <!-- 步骤1 -->
+                    <div class="relative z-10 grid grid-cols-1 md:grid-cols-5 gap-8 mb-12">
+                        <div class="md:col-span-2">
+                            <div class="bg-primary text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-xl mb-4">1</div>
+                            <h4 class="text-xl font-bold text-primary mb-3">Inquiry & Quotation</h4>
+                            <p class="text-gray-600">
+                                Send us your inquiry with specific requirements (model, quantity, destination, etc.). Our team will provide you with a detailed quotation within 24 hours.
+                            </p>
+                        </div>
+                        <div class="md:col-span-3"></div>
+                    </div>
+                    
+                    <!-- 步骤2 -->
+                    <div class="relative z-10 grid grid-cols-1 md:grid-cols-5 gap-8 mb-12">
+                        <div class="md:col-span-3"></div>
+                        <div class="md:col-span-2">
+                            <div class="bg-primary text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-xl mb-4">2</div>
+                            <h4 class="text-xl font-bold text-primary mb-3">Order Confirmation</h4>
+                            <p class="text-gray-600">
+                                Confirm the order details and sign the sales contract. We accept various payment methods including T/T, L/C, and other secure payment options.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- 步骤3 -->
+                    <div class="relative z-10 grid grid-cols-1 md:grid-cols-5 gap-8 mb-12">
+                        <div class="md:col-span-2">
+                            <div class="bg-primary text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-xl mb-4">3</div>
+                            <h4 class="text-xl font-bold text-primary mb-3">Payment & Production</h4>
+                            <p class="text-gray-600">
+                                Make the required payment according to the contract terms. We will arrange production or prepare the vehicles for shipment upon receipt of payment.
+                            </p>
+                        </div>
+                        <div class="md:col-span-3"></div>
+                    </div>
+                    
+                    <!-- 步骤4 -->
+                    <div class="relative z-10 grid grid-cols-1 md:grid-cols-5 gap-8 mb-12">
+                        <div class="md:col-span-3"></div>
+                        <div class="md:col-span-2">
+                            <div class="bg-primary text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-xl mb-4">4</div>
+                            <h4 class="text-xl font-bold text-primary mb-3">Documentation & Customs</h4>
+                            <p class="text-gray-600">
+                                Our team will prepare all necessary documents and handle customs clearance procedures to ensure smooth export of the vehicles.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- 步骤5 -->
+                    <div class="relative z-10 grid grid-cols-1 md:grid-cols-5 gap-8">
+                        <div class="md:col-span-2">
+                            <div class="bg-primary text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-xl mb-4">5</div>
+                            <h4 class="text-xl font-bold text-primary mb-3">Shipping & Delivery</h4>
+                            <p class="text-gray-600">
+                                The vehicles will be shipped to the designated port or location using the agreed shipping method. We will provide tracking information for you to monitor the shipment.
+                            </p>
+                        </div>
+                        <div class="md:col-span-3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 3D车型预览 -->
+    <section class="py-20 bg-gray-900 text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">3D Car Preview</h2>
+                <p class="text-gray-300 max-w-2xl mx-auto">360°全方位欣赏您喜爱的车型，体验沉浸式看车</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- 3D预览区域 -->
+                <div class="bg-gray-800 rounded-xl overflow-hidden" data-aos="fade-right">
+                    <div id="car-3d-preview" class="w-full h-[500px]"></div>
+                </div>
+                
+                <!-- 车型信息 -->
+                <div data-aos="fade-left">
+                    <h3 class="text-2xl font-bold mb-6">Tesla Model Y Refresh</h3>
+                    <div class="mb-8">
+                        <div class="flex items-center mb-4">
+                            <div class="w-16 h-1 bg-accent rounded-full mr-4"></div>
+                            <span class="text-accent font-semibold">New Energy Vehicle</span>
+                        </div>
+                        <p class="text-gray-300 mb-6">
+                            The Tesla Model Y Refresh features a comprehensive suspension system upgrade, 51% improvement in vibration filtering, 20% reduction in wind noise, and 22% reduction in road noise, taking the driving experience to the next level.
+                        </p>
+                        <div class="grid grid-cols-2 gap-6 mb-8">
+                            <div>
+                                <h4 class="text-lg font-semibold mb-2">Specifications</h4>
+                                <ul class="space-y-2">
+                                    <li class="flex items-center">
+                                        <i class="fa fa-bolt text-accent mr-2"></i>
+                                        <span class="text-gray-300">Electric Motor</span>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <i class="fa fa-tachometer text-accent mr-2"></i>
+                                        <span class="text-gray-300">0-100km/h: 4.3s</span>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <i class="fa fa-road text-accent mr-2"></i>
+                                        <span class="text-gray-300">Range: 719km</span>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <i class="fa fa-cog text-accent mr-2"></i>
+                                        <span class="text-gray-300">Autopilot</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold mb-2">Features</h4>
+                                <ul class="space-y-2">
+                                    <li class="flex items-center">
+                                        <i class="fa fa-check text-accent mr-2"></i>
+                                        <span class="text-gray-300">Panoramic Roof</span>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <i class="fa fa-check text-accent mr-2"></i>
+                                        <span class="text-gray-300">15-inch Touchscreen</span>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <i class="fa fa-check text-accent mr-2"></i>
+                                        <span class="text-gray-300">Premium Audio System</span>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <i class="fa fa-check text-accent mr-2"></i>
+                                        <span class="text-gray-300">Advanced Safety Features</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-4">
+                            <button class="bg-accent hover:bg-red-600 text-white px-6 py-3 rounded-full transition-colors">
+                                Get Export Quote
+                            </button>
+                            <button class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-gray-900 px-6 py-3 rounded-full transition-colors">
+                                Download Brochure
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- AI智能推荐 -->
+    <section id="ai-recommend" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">AI Smart Car Recommendation</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Based on your browsing history and preferences, our AI system will recommend the most suitable models for you</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- 左侧表单 -->
+                <div class="bg-white rounded-xl shadow-lg p-8" data-aos="fade-right">
+                    <h3 class="text-2xl font-bold text-primary mb-6">Your Preferences</h3>
+                    
+                    <div class="mb-6">
+                        <label class="block text-gray-700 mb-2">Budget Range</label>
+                        <select class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary">
+                            <option value="">Select Budget Range</option>
+                            <option value="10-20">¥100,000 - ¥200,000</option>
+                            <option value="20-30">¥200,000 - ¥300,000</option>
+                            <option value="30-50">¥300,000 - ¥500,000</option>
+                            <option value="50-100">¥500,000 - ¥1,000,000</option>
+                            <option value="100+">Above ¥1,000,000</option>
+                        </select>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label class="block text-gray-700 mb-2">Body Type</label>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="flex items-center">
+                                <input type="checkbox" id="sedan" class="mr-2">
+                                <label for="sedan">Sedan</label>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="checkbox" id="suv" class="mr-2">
+                                <label for="suv">SUV</label>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="checkbox" id="mpv" class="mr-2">
+                                <label for="mpv">MPV</label>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="checkbox" id="sports" class="mr-2">
+                                <label for="sports">Sports Car</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label class="block text-gray-700 mb-2">Energy Type</label>
+                        <div class="grid grid-cols-3 gap-4">
+                            <div class="flex items-center">
+                                <input type="radio" name="energy" id="electric" class="mr-2">
+                                <label for="electric">Electric</label>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="radio" name="energy" id="hybrid" class="mr-2">
+                                <label for="hybrid">Hybrid</label>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="radio" name="energy" id="fuel" class="mr-2">
+                                <label for="fuel">Fuel</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label class="block text-gray-700 mb-2">Priority Features (Select up to 3)</label>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="flex items-center">
+                                <input type="checkbox" id="performance" class="mr-2">
+                                <label for="performance">Performance</label>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="checkbox" id="comfort" class="mr-2">
+                                <label for="comfort">Comfort</label>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="checkbox" id="technology" class="mr-2">
+                                <label for="technology">Technology</label>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="checkbox" id="safety" class="mr-2">
+                                <label for="safety">Safety</label>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="checkbox" id="range" class="mr-2">
+                                <label for="range">Range</label>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="checkbox" id="space" class="mr-2">
+                                <label for="space">Space</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label class="block text-gray-700 mb-2">Export Destination</label>
+                        <select class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary">
+                            <option value="">Select Destination Country/Region</option>
+                            <option value="asia">Asia</option>
+                            <option value="europe">Europe</option>
+                            <option value="namerica">North America</option>
+                            <option value="samerica">South America</option>
+                            <option value="africa">Africa</option>
+                            <option value="oceania">Oceania</option>
+                        </select>
+                    </div>
+                    
+                    <button id="ai-recommend-btn" class="w-full bg-primary hover:bg-secondary text-white py-3 rounded-lg text-lg font-medium transition-colors">
+                        <i class="fa fa-magic mr-2"></i>Get AI Recommendation
+                    </button>
+                </div>
+                
+                <!-- 右侧结果 -->
+                <div id="ai-recommendation-initial" class="bg-white rounded-xl shadow-lg p-8 flex flex-col items-center justify-center text-center" data-aos="fade-left">
+                    <div class="bg-primary bg-opacity-10 rounded-full p-6 mb-6">
+                        <i class="fa fa-lightbulb-o text-4xl text-primary"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-primary mb-4">AI Smart Recommendation</h3>
+                    <p class="text-gray-600 mb-6">
+                        Fill out the form on the left to tell us your car purchase preferences, and our AI system will recommend the most suitable models for you.
+                        Based on your browsing history and choices, we will continuously optimize the recommendation results.
+                    </p>
+                    <div class="flex flex-col items-center">
+                        <div class="w-16 h-1 bg-gray-300 rounded-full mb-2"></div>
+                        <p class="text-gray-500">Start Your Personalized Recommendation</p>
+                    </div>
+                </div>
+                
+                <div id="ai-recommendation-result" class="hidden bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-left">
+                    <!-- 推荐结果 -->
+                    <div class="relative h-64">
+                        <img src="https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/super_tool/1abe14a2acaa489d8fe25f0411e3e15f~tplv-a9rns2rl98-image.image?rcl=20251029222539170D74A36C4F6BB03D60&rk3s=8e244e95&rrcfp=f06b921b&x-expires=1764339975&x-signature=GnD911TdfT51qThNhR0CV%2BFa6S4%3D" alt="Tesla Model Y Refresh" class="w-full h-full object-cover">
+                        <div class="absolute top-4 right-4 bg-accent text-white text-sm font-bold px-3 py-1 rounded-full">
+                            98% Match
+                        </div>
+                    </div>
+                    
+                    <div class="p-8">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-xl font-bold text-primary">Tesla Model Y Refresh</h3>
+                            <span class="text-lg font-semibold text-accent">Starting at ¥339,900</span>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h5 class="text-lg font-semibold text-primary mb-4">Why Recommend This Car?</h5>
+                            <div class="space-y-3">
+                                <div class="flex items-start">
+                                    <div class="bg-green-100 rounded-full p-2 mr-3">
+                                        <i class="fa fa-check text-green-600"></i>
+                                    </div>
+                                    <p class="text-gray-700">The technology features you care about highly match this car's autopilot system</p>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="bg-green-100 rounded-full p-2 mr-3">
+                                        <i class="fa fa-check text-green-600"></i>
+                                    </div>
+                                    <p class="text-gray-700">You have viewed new energy models multiple times, and this car has the best range performance</p>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="bg-green-100 rounded-full p-2 mr-3">
+                                        <i class="fa fa-check text-green-600"></i>
+                                    </div>
+                                    <p class="text-gray-700">Your budget range perfectly matches the pricing of this car</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h5 class="text-lg font-semibold text-primary mb-4">More Recommendations</h5>
+                            <div class="space-y-4">
+                                <div class="flex items-center p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
+                                    <img src="https://p26-doubao-search-sign.byteimg.com/tos-cn-i-qvj2lq49k0/9b54a9e1049b4e22b76e5636f8b708da~tplv-be4g95zd3a-image.jpeg?rk3s=542c0f93&x-expires=1777299961&x-signature=DDyw1u656nyfRyPV1XtX82VqKoo%3D" alt="ARCFOX Alpha T5" class="w-20 h-16 object-cover rounded mr-4">
+                                    <div class="flex-1">
+                                        <h6 class="font-semibold text-primary">ARCFOX Alpha T5</h6>
+                                        <p class="text-sm text-gray-600">Match: 92%</p>
+                                    </div>
+                                    <span class="font-semibold text-accent">Starting at ¥219,800</span>
+                                </div>
+                                <div class="flex items-center p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
+                                    <img src="https://p26-doubao-search-sign.byteimg.com/tos-cn-i-qvj2lq49k0/09dbc17eebc04ac198b79d2e553097fb~tplv-be4g95zd3a-image.jpeg?rk3s=542c0f93&x-expires=1777299961&x-signature=oc6MO5dGzDxSnzLd6Mm%2F99%25%25fIk%3D" alt="BYD Tang L" class="w-20 h-16 object-cover rounded mr-4">
+                                    <div class="flex-1">
+                                        <h6 class="font-semibold text-primary">BYD Tang L</h6>
+                                        <p class="text-sm text-gray-600">Match: 88%</p>
+                                    </div>
+                                    <span class="font-semibold text-accent">Starting at ¥259,800</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8 flex gap-4">
+                            <button class="flex-1 bg-primary hover:bg-secondary text-white py-3 rounded-lg transition-colors">
+                                <i class="fa fa-file-text-o mr-2"></i>View Full Report
+                            </button>
+                            <button class="flex-1 bg-accent hover:bg-red-600 text-white py-3 rounded-lg transition-colors">
+                                <i class="fa fa-envelope mr-2"></i>Send Inquiry
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 销量排行 -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">2025 Sales Ranking</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Learn about the most popular models on the current market and reference others' choices</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- 新能源销量排行 -->
+                <div class="bg-gray-50 rounded-xl shadow-lg p-8" data-aos="fade-right">
+                    <h3 class="text-2xl font-bold text-primary mb-6">New Energy Vehicle Sales TOP5</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-center p-4 bg-white rounded-lg shadow">
+                            <div class="bg-accent text-white text-xl font-bold w-10 h-10 rounded-full flex items-center justify-center mr-4">1</div>
+                            <img src="https://p26-doubao-search-sign.byteimg.com/tos-cn-i-qvj2lq49k0/09dbc17eebc04ac198b79d2e553097fb~tplv-be4g95zd3a-image.jpeg?rk3s=542c0f93&x-expires=1777299961&x-signature=oc6MO5dGzDxSnzLd6Mm%2F99%25%25fIk%3D" alt="BYD Tang L" class="w-16 h-16 object-cover rounded mr-4">
+                            <div class="flex-1">
+                                <h4 class="font-semibold text-primary">BYD Tang L</h4>
+                                <p class="text-sm text-gray-600">Monthly Sales: 37,142 units</p>
+                            </div>
+                            <span class="text-accent font-semibold">+23.5%</span>
+                        </div>
+                        
+                        <div class="flex items-center p-4 bg-white rounded-lg shadow">
+                            <div class="bg-gray-300 text-gray-700 text-xl font-bold w-10 h-10 rounded-full flex items-center justify-center mr-4">2</div>
+                            <img src="https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/super_tool/1abe14a2acaa489d8fe25f0411e3e15f~tplv-a9rns2rl98-image.image?rcl=20251029222539170D74A36C4F6BB03D60&rk3s=8e244e95&rrcfp=f06b921b&x-expires=1764339975&x-signature=GnD911TdfT51qThNhR0CV%2BFa6S4%3D" alt="Tesla Model Y Refresh" class="w-16 h-16 object-cover rounded mr-4">
+                            <div class="flex-1">
+                                <h4 class="font-semibold text-primary">Tesla Model Y Refresh</h4>
+                                <p class="text-sm text-gray-600">Monthly Sales: 28,828 units</p>
+                            </div>
+                            <span class="text-accent font-semibold">+18.2%</span>
+                        </div>
+                        
+                        <div class="flex items-center p-4 bg-white rounded-lg shadow">
+                            <div class="bg-amber-500 text-white text-xl font-bold w-10 h-10 rounded-full flex items-center justify-center mr-4">3</div>
+                            <img src="https://p26-doubao-search-sign.byteimg.com/tos-cn-i-qvj2lq49k0/9b54a9e1049b4e22b76e5636f8b708da~tplv-be4g95zd3a-image.jpeg?rk3s=542c0f93&x-expires=1777299961&x-signature=DDyw1u656nyfRyPV1XtX82VqKoo%3D" alt="ARCFOX Alpha T5" class="w-16 h-16 object-cover rounded mr-4">
+                            <div class="flex-1">
+                                <h4 class="font-semibold text-primary">ARCFOX Alpha T5</h4>
+                                <p class="text-sm text-gray-600">Monthly Sales: 25,696 units</p>
+                            </div>
+                            <span class="text-accent font-semibold">+32.7%</span>
+                        </div>
+                        
+                        <div class="flex items-center p-4 bg-white rounded-lg shadow">
+                            <div class="bg-gray-200 text-gray-700 text-xl font-bold w-10 h-10 rounded-full flex items-center justify-center mr-4">4</div>
+                            <img src="https://p26-doubao-search-sign.byteimg.com/pgc-image/6fd3f2024c824ce78ea6ef96eb20acc0~tplv-be4g95zd3a-image.jpeg?rk3s=542c0f93&x-expires=1777299961&x-signature=VYTYBP4kZwANjw%2F5N8NaPfcvsKc%3D" alt="XPeng G6" class="w-16 h-16 object-cover rounded mr-4">
+                            <div class="flex-1">
+                                <h4 class="font-semibold text-primary">XPeng G6</h4>
+                                <p class="text-sm text-gray-600">Monthly Sales: 18,458 units</p>
+                            </div>
+                            <span class="text-accent font-semibold">+15.3%</span>
+                        </div>
+                        
+                        <div class="flex items-center p-4 bg-white rounded-lg shadow">
+                            <div class="bg-gray-200 text-gray-700 text-xl font-bold w-10 h-10 rounded-full flex items-center justify-center mr-4">5</div>
+                            <img src="https://p3-doubao-search-sign.byteimg.com/mosaic-legacy/32230003a8780946a7a5~tplv-be4g95zd3a-image.jpeg?rk3s=542c0f93&x-expires=1777299961&x-signature=R1QA1YYiZR1r6KXhrkFEt1kSPOY%3D" alt="AITO M7" class="w-16 h-16 object-cover rounded mr-4">
+                            <div class="flex-1">
+                                <h4 class="font-semibold text-primary">AITO M7</h4>
+                                <p class="text-sm text-gray-600">Monthly Sales: 16,235 units</p>
+                            </div>
+                            <span class="text-accent font-semibold">+9.8%</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 销量趋势图 -->
+                <div class="bg-gray-50 rounded-xl shadow-lg p-8" data-aos="fade-left">
+                    <h3 class="text-2xl font-bold text-primary mb-6">Sales Trend</h3>
+                    <div class="bg-white p-4 rounded-lg shadow">
+                        <canvas id="salesChart" height="300"></canvas>
+                    </div>
+                    <div class="mt-6 grid grid-cols-2 gap-4">
+                        <div class="bg-white p-4 rounded-lg shadow">
+                            <h4 class="font-semibold text-primary mb-2">Market Share</h4>
+                            <canvas id="marketShareChart" height="200"></canvas>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow">
+                            <h4 class="font-semibold text-primary mb-2">Energy Type Ratio</h4>
+                            <canvas id="energyTypeChart" height="200"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 预约试驾 -->
+    <section class="py-20 bg-primary">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Test Drive Appointment</h2>
+                    <p class="text-gray-200 mb-8">
+                        Experience your favorite model in person and feel the excellent performance and comfortable driving. Fill out the form below, and our consultant will contact you as soon as possible
+                        to arrange an exclusive test drive experience for you.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-white bg-opacity-20 rounded-full p-3 mr-4">
+                                <i class="fa fa-car text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-semibold mb-2">Multiple Models Available</h4>
+                                <p class="text-gray-200">We offer test drive services for the full range of models to meet your different needs.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-white bg-opacity-20 rounded-full p-3 mr-4">
+                                <i class="fa fa-map-marker text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-semibold mb-2">Convenient Test Drive Locations</h4>
+                                <p class="text-gray-200">Multiple experience centers nationwide to provide you with convenient test drive services.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-white bg-opacity-20 rounded-full p-3 mr-4">
+                                <i class="fa fa-user text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-semibold mb-2">Professional Consultant Accompaniment</h4>
+                                <p class="text-gray-200">A professional consultant will accompany you throughout the process to introduce the vehicle's performance and features in detail.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-lg p-8 text-gray-800" data-aos="fade-left">
+                    <h3 class="text-2xl font-bold text-primary mb-6">Fill in Test Drive Information</h3>
+                    <form>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label class="block text-gray-700 mb-2">Name</label>
+                                <input type="text" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Please enter your name">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 mb-2">Phone Number</label>
+                                <input type="tel" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Please enter your phone number">
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label class="block text-gray-700 mb-2">Interested Model</label>
+                            <select class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary">
+                                <option value="">Select Interested Model</option>
+                                <option value="tesla-modely">Tesla Model Y Refresh</option>
+                                <option value="byd-tangl">BYD Tang L</option>
+                                <option value="nio-es6">NIO ES6</option>
+                                <option value="xpeng-g6">XPeng G6</option>
+                                <option value="li-auto-l7">Li Auto L7</option>
+                            </select>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label class="block text-gray-700 mb-2">Appointment Date</label>
+                                <input type="date" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 mb-2">Appointment Time</label>
+                                <select class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary">
+                                    <option value="">Select Time Slot</option>
+                                    <option value="9-10">9:00-10:00</option>
+                                    <option value="10-11">10:00-11:00</option>
+                                    <option value="11-12">11:00-12:00</option>
+                                    <option value="14-15">14:00-15:00</option>
+                                    <option value="15-16">15:00-16:00</option>
+                                    <option value="16-17">16:00-17:00</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label class="block text-gray-700 mb-2">Remarks</label>
+                            <textarea class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary" rows="3" placeholder="Please enter your special requirements or other remarks"></textarea>
+                        </div>
+                        
+                        <button type="button" class="w-full bg-primary hover:bg-secondary text-white py-3 rounded-lg text-lg font-medium transition-colors">
+                            Submit Appointment
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 联系我们 -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Contact Us</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">If you have any questions or need more information, please feel free to contact us</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- 地址 -->
+                <div class="bg-white rounded-xl shadow-lg p-8 text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-primary bg-opacity-10 rounded-full p-6 mb-6 inline-block">
+                        <i class="fa fa-map-marker text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-4">Address</h3>
+                    <p class="text-gray-600">Auto Sales Center Building<br>No. 88 Jianguo Road, Chaoyang District, Beijing</p>
+                </div>
+                
+                <!-- 电话 -->
+                <div class="bg-white rounded-xl shadow-lg p-8 text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-primary bg-opacity-10 rounded-full p-6 mb-6 inline-block">
+                        <i class="fa fa-phone text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-4">Phone</h3>
+                    <p class="text-gray-600">Sales Hotline: 400-888-8888<br>Service Hotline: 400-999-9999</p>
+                </div>
+                
+                <!-- 邮箱 -->
+                <div class="bg-white rounded-xl shadow-lg p-8 text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="bg-primary bg-opacity-10 rounded-full p-6 mb-6 inline-block">
+                        <i class="fa fa-envelope text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-4">Email</h3>
+                    <p class="text-gray-600">Sales Inquiry: sales@autoelite.com<br>After-sales Service: service@autoelite.com</p>
+                </div>
+            </div>
+            
+            <!-- 国际业务联系 -->
+            <div class="mt-16 bg-white rounded-xl shadow-lg p-8" data-aos="fade-up">
+                <h3 class="text-2xl font-bold text-primary mb-6">International Business Contacts</h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h4 class="text-xl font-semibold text-primary mb-4">Export Department</h4>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="bg-primary bg-opacity-10 rounded-full p-3 mr-4">
+                                    <i class="fa fa-user text-primary"></i>
+                                </div>
+                                <div>
+                                    <h5 class="font-semibold text-gray-800">Mr. Zhang Wei</h5>
+                                    <p class="text-gray-600">Export Manager</p>
+                                    <p class="text-gray-600">Phone: +86 138 1234 5678</p>
+                                    <p class="text-gray-600">Email: export@autoelite.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-primary bg-opacity-10 rounded-full p-3 mr-4">
+                                    <i class="fa fa-user text-primary"></i>
+                                </div>
+                                <div>
+                                    <h5 class="font-semibold text-gray-800">Ms. Li Na</h5>
+                                    <p class="text-gray-600">International Sales Specialist</p>
+                                    <p class="text-gray-600">Phone: +86 139 8765 4321</p>
+                                    <p class="text-gray-600">Email: international@autoelite.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-xl font-semibold text-primary mb-4">International Payment & Shipping</h4>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="bg-primary bg-opacity-10 rounded-full p-3 mr-4">
+                                    <i class="fa fa-credit-card text-primary"></i>
+                                </div>
+                                <div>
+                                    <h5 class="font-semibold text-gray-800">Accepted Payment Methods</h5>
+                                    <p class="text-gray-600">T/T (Telegraphic Transfer), L/C (Letter of Credit), Western Union</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-primary bg-opacity-10 rounded-full p-3 mr-4">
+                                    <i class="fa fa-ship text-primary"></i>
+                                </div>
+                                <div>
+                                    <h5 class="font-semibold text-gray-800">Shipping Options</h5>
+                                    <p class="text-gray-600">RORO, Container (FCL/LCL), Air Freight</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-primary bg-opacity-10 rounded-full p-3 mr-4">
+                                    <i class="fa fa-globe text-primary"></i>
+                                </div>
+                                <div>
+                                    <h5 class="font-semibold text-gray-800">Serving Countries/Regions</h5>
+                                    <p class="text-gray-600">North America, South America, Europe, Africa, Asia, Oceania</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 批发询价表单 -->
+    <section id="wholesale-quote" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="section-title">Wholesale Quote Request</h2>
+                <p class="section-subtitle">Looking for bulk purchases or export orders? Fill out the form below to get competitive wholesale pricing.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- 表单图片 -->
+                <div data-aos="fade-right">
+                    <img src="https://p6-flow-sign.byteimg.com/tos-cn-i-ik7evvg4ik/supertask_file_1163d85f-082f-452d-8b3a-8d7d180a5216?rk3s=4e0a0f58&x-expires=1764339264&x-signature=C7%2FkQdDnKXQoQa1ZtJQn8GpQjZg%3D" alt="Wholesale Car Export" class="w-full h-auto rounded-xl shadow-lg">
+                </div>
+                
+                <!-- 表单 -->
+                <div class="bg-white rounded-xl shadow-lg p-8" data-aos="fade-left">
+                    <h3 class="text-2xl font-bold text-primary mb-6">Request Your Quote</h3>
+                    
+                    <div id="form-status" class="hidden mb-6 p-4 rounded-lg border flex items-center">
+                        <i id="status-icon" class="fa mr-3"></i>
+                        <span id="status-message"></span>
+                    </div>
+                    
+                    <form>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label for="contact-name" class="block text-gray-700 mb-2">
+                                    <span class="text-accent">*</span> Your Name
+                                </label>
+                                <input type="text" id="contact-name" required class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary" placeholder="John Doe" aria-required="true">
+                                <div id="contact-name-hint" class="text-xs text-gray-500 mt-1">Please enter your full name</div>
+                            </div>
+                            <div>
+                                <label for="contact-email" class="block text-gray-700 mb-2">
+                                    <span class="text-accent">*</span> Email Address
+                                </label>
+                                <input type="email" id="contact-email" required class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary" placeholder="your@email.com" aria-required="true">
+                                <div id="contact-email-hint" class="text-xs text-gray-500 mt-1">We'll contact you via this email</div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="company-name" class="block text-gray-700 mb-2">
+                                <span class="text-accent">*</span> Company Name
+                            </label>
+                            <input type="text" id="company-name" required class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Your Company" aria-required="true">
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label for="country" class="block text-gray-700 mb-2">
+                                    <span class="text-accent">*</span> Country/Region
+                                </label>
+                                <select id="country" required class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary" aria-required="true">
+                                    <option value="">Select Country/Region</option>
+                                    <option value="usa">United States</option>
+                                    <option value="uk">United Kingdom</option>
+                                    <option value="canada">Canada</option>
+                                    <option value="germany">Germany</option>
+                                    <option value="france">France</option>
+                                    <option value="uae">United Arab Emirates</option>
+                                    <option value="australia">Australia</option>
+                                    <option value="japan">Japan</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="car-model" class="block text-gray-700 mb-2">
+                                    <span class="text-accent">*</span> Interested Model(s)
+                                </label>
+                                <select id="car-model" required class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary" aria-required="true">
+                                    <option value="">Select Model</option>
+                                    <option value="tesla-modely">Tesla Model Y Refresh</option>
+                                    <option value="byd-tangl">BYD Tang L</option>
+                                    <option value="nio-es6">NIO ES6</option>
+                                    <option value="xpeng-g6">XPeng G6</option>
+                                    <option value="li-auto-l7">Li Auto L7</option>
+                                    <option value="multiple">Multiple Models</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label for="quantity" class="block text-gray-700 mb-2">
+                                    <span class="text-accent">*</span> Estimated Quantity
+                                </label>
+                                <input type="number" id="quantity" min="1" required class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary" placeholder="5" aria-required="true">
+                            </div>
+                            <div>
+                                <label for="purchase-time" class="block text-gray-700 mb-2">
+                                    <span class="text-accent">*</span> Expected Purchase Time
+                                </label>
+                                <select id="purchase-time" required class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary" aria-required="true">
+                                    <option value="">Select Timeframe</option>
+                                    <option value="immediate">Immediate (within 1 month)</option>
+                                    <option value="short-term">Short-term (1-3 months)</option>
+                                    <option value="mid-term">Mid-term (3-6 months)</option>
+                                    <option value="long-term">Long-term (6+ months)</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="purchase-details" class="block text-gray-700 mb-2">Additional Requirements</label>
+                            <div class="relative">
+                                <textarea id="purchase-details" rows="4" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Please provide details about your specific requirements, preferred shipping methods, or any other relevant information..."></textarea>
+                                <div id="char-count" class="absolute bottom-2 right-3 text-xs text-gray-500">0/500</div>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-accent hover:bg-red-600 text-white py-3 rounded-lg text-lg font-medium transition-all duration-300 transform hover:scale-[1.02] shadow-md hover:shadow-lg flex items-center justify-center">
+                            <i class="fa fa-paper-plane mr-2"></i> Submit Quote Request
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 页脚 -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- 公司信息 -->
+                <div>
+                    <h3 class="text-xl font-bold mb-6">Auto<span class="text-accent">Elite</span></h3>
+                    <p class="text-gray-400 mb-6">
+                        A professional car sales platform providing you with a comprehensive car buying experience and services.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-accent transition-colors">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-accent transition-colors">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-accent transition-colors">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-accent transition-colors">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 快速链接 -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-6">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#models" class="text-gray-400 hover:text-white transition-colors">Popular Models</a></li>
+                        <li><a href="#brands" class="text-gray-400 hover:text-white transition-colors">Brands</a></li>
+                        <li><a href="#export-services" class="text-gray-400 hover:text-white transition-colors">Export Services</a></li>
+                        <li><a href="#ai-recommend" class="text-gray-400 hover:text-white transition-colors">AI Recommendation</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <!-- 服务支持 -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-6">Service Support</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Test Drive</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Financial Services</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">After-sales Service</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Parts Mall</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <!-- 联系方式 -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-6">Contact Information</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fa fa-map-marker text-accent mt-1 mr-3"></i>
+                            <span class="text-gray-400">Auto Sales Center Building, No. 88 Jianguo Road, Chaoyang District, Beijing</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-phone text-accent mr-3"></i>
+                            <span class="text-gray-400">400-888-8888</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-envelope text-accent mr-3"></i>
+                            <span class="text-gray-400">info@autoelite.com</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-clock-o text-accent mr-3"></i>
+                            <span class="text-gray-400">Monday to Sunday 9:00-21:00</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2025 AutoElite. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">Terms of Use</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">Site Map</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- 返回顶部按钮 -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-primary hover:bg-secondary text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 opacity-0 invisible">
+        <i class="fa fa-chevron-up"></i>
+    </button>
+    
+    <!-- JavaScript -->
+    <script>
+        // 导航栏滚动效果
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-primary');
+                navbar.classList.remove('glass-effect');
+            } else {
+                navbar.classList.remove('bg-primary');
+                navbar.classList.add('glass-effect');
+            }
+            
+            // 返回顶部按钮显示/隐藏
+            const backToTopBtn = document.getElementById('back-to-top');
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.remove('opacity-0', 'invisible');
+                backToTopBtn.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopBtn.classList.add('opacity-0', 'invisible');
+                backToTopBtn.classList.remove('opacity-100', 'visible');
+            }
+        });
+        
+        // 返回顶部按钮点击事件
+        document.getElementById('back-to-top').addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // 移动端菜单切换
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // 初始化AOS动画库
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                duration: 800,
+                easing: 'ease-in-out',
+                once: true
+            });
+        });
+        
+        // 筛选按钮点击事件
+        const filterBtn = document.getElementById('filter-btn');
+        const carList = document.getElementById('car-list');
+        
+        filterBtn.addEventListener('click', function() {
+            filterBtn.innerHTML = '<i class="fa fa-spinner fa-spin mr-2"></i>Filtering...';
+            filterBtn.disabled = true;
+            carList.classList.add('opacity-50');
+            
+            setTimeout(() => {
+                carList.classList.remove('opacity-50');
+                // 这里可以添加实际的筛选逻辑
+                alert('Filter function triggered, in actual application, the car list will be filtered according to the selected conditions');
+                filterBtn.innerHTML = '<i class="fa fa-search mr-2"></i>Filter Models';
+                filterBtn.disabled = false;
+            }, 800);
+        });
+        
+        // 加载更多按钮点击事件
+        const loadMoreBtn = document.getElementById('load-more');
+        loadMoreBtn.addEventListener('click', function() {
+            loadMoreBtn.innerHTML = '<i class="fa fa-spinner fa-spin mr-2"></i>Loading...';
+            
+            setTimeout(() => {
+                loadMoreBtn.innerHTML = 'Load More Models';
+                // 这里可以添加实际的加载更多逻辑
+                alert('Load more function triggered, in actual application, more car data will be loaded');
+            }, 1500);
+        });
+        
+        // AI推荐按钮点击事件
+        const aiRecommendBtn = document.getElementById('ai-recommend-btn');
+        const aiRecommendationInitial = document.getElementById('ai-recommendation-initial');
+        const aiRecommendationResult = document.getElementById('ai-recommendation-result');
+        
+        aiRecommendBtn.addEventListener('click', function() {
+            aiRecommendBtn.innerHTML = '<i class="fa fa-spinner fa-spin mr-2"></i>AI Analyzing...';
+            aiRecommendBtn.disabled = true;
+            
+            setTimeout(() => {
+                aiRecommendationInitial.classList.add('hidden');
+                aiRecommendationResult.classList.remove('hidden');
+                aiRecommendBtn.innerHTML = '<i class="fa fa-magic mr-2"></i>Get AI Recommendation';
+                aiRecommendBtn.disabled = false;
+            }, 2000);
+        });
+        
+        // 3D车型预览
+        let scene, camera, renderer, controls, carModel;
+        
+        function init3DScene() {
+            // 创建场景
+            scene = new THREE.Scene();
+            scene.background = new THREE.Color(0xf0f0f0);
+            
+            // 创建相机
+            camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000);
+            camera.position.z = 5;
+            
+            // 创建渲染器
+            const container = document.getElementById('car-3d-preview');
+            renderer = new THREE.WebGLRenderer({ antialias: true });
+            renderer.setSize(container.clientWidth, container.clientHeight);
+            container.appendChild(renderer.domElement);
+            
+            // 添加轨道控制
+            controls = new THREE.OrbitControls(camera, renderer.domElement);
+            controls.enableDamping = true;
+            controls.dampingFactor = 0.05;
+            
+            // 添加灯光
+            const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+            scene.add(ambientLight);
+            
+            const directionalLight = new THREE.DirectionalLight(0xffffff, 0.8);
+            directionalLight.position.set(1, 1, 1);
+            scene.add(directionalLight);
+            
+            // 创建简单的汽车模型（实际项目中应该加载3D模型文件）
+            const carGeometry = new THREE.BoxGeometry(2, 1, 1);
+            const carMaterial = new THREE.MeshPhongMaterial({ color: 0x0F3460 });
+            carModel = new THREE.Mesh(carGeometry, carMaterial);
+            scene.add(carModel);
+            
+            // 添加车轮
+            const wheelGeometry = new THREE.CylinderGeometry(0.3, 0.3, 0.2, 16);
+            const wheelMaterial = new THREE.MeshPhongMaterial({ color: 0x333333 });
+            
+            const wheel1 = new THREE.Mesh(wheelGeometry, wheelMaterial);
+            wheel1.position.set(-0.8, -0.5, 0.6);
+            wheel1.rotation.z = Math.PI / 2;
+            scene.add(wheel1);
+            
+            const wheel2 = new THREE.Mesh(wheelGeometry, wheelMaterial);
+            wheel2.position.set(0.8, -0.5, 0.6);
+            wheel2.rotation.z = Math.PI / 2;
+            scene.add(wheel2);
+            
+            const wheel3 = new THREE.Mesh(wheelGeometry, wheelMaterial);
+            wheel3.position.set(-0.8, -0.5, -0.6);
+            wheel3.rotation.z = Math.PI / 2;
+            scene.add(wheel3);
+            
+            const wheel4 = new THREE.Mesh(wheelGeometry, wheelMaterial);
+            wheel4.position.set(0.8, -0.5, -0.6);
+            wheel4.rotation.z = Math.PI / 2;
+            scene.add(wheel4);
+            
+            // 动画循环
+            animate();
+            
+            // 响应窗口大小变化
+            window.addEventListener('resize', onWindowResize);
+        }
+        
+        function animate() {
+            requestAnimationFrame(animate);
+            controls.update();
+            renderer.render(scene, camera);
+        }
+        
+        function onWindowResize() {
+            const container = document.getElementById('car-3d-preview');
+            camera.aspect = container.clientWidth / container.clientHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(container.clientWidth, container.clientHeight);
+        }
+        
+        // 页面加载完成后初始化3D场景
+        window.addEventListener('load', init3DScene);
+        
+        // 销售数据图表
+        document.addEventListener('DOMContentLoaded', function() {
+            // 销量趋势图
+            const salesCtx = document.getElementById('salesChart').getContext('2d');
+            const salesChart = new Chart(salesCtx, {
+                type: 'line',
+                data: {
+                    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+                    datasets: [
+                        {
+                            label: 'BYD',
+                            data: [320000, 340000, 371419, 350000, 380000, 400000],
+                            borderColor: '#E94560',
+                            backgroundColor: 'rgba(233, 69, 96, 0.1)',
+                            tension: 0.4,
+                            fill: true
+                        },
+                        {
+                            label: 'Tesla',
+                            data: [65000, 70000, 78828, 82000, 85000, 90000],
+                            borderColor: '#0F3460',
+                            backgroundColor: 'rgba(15, 52, 96, 0.1)',
+                            tension: 0.4,
+                            fill: true
+                        },
+                        {
+                            label: 'Geely',
+                            data: [100000, 105000, 119696, 125000, 130000, 135000],
+                            borderColor: '#4CAF50',
+                            backgroundColor: 'rgba(76, 175, 80, 0.1)',
+                            tension: 0.4,
+                            fill: true
+                        },
+                        {
+                            label: 'NIO',
+                            data: [12200, 13500, 14158, 15000, 16000, 17000],
+                            borderColor: '#FFC107',
+                            backgroundColor: 'rgba(255, 193, 7, 0.1)',
+                            tension: 0.4,
+                            fill: true
+                        },
+                        {
+                            label: 'XPeng',
+                            data: [11000, 12000, 14000, 13500, 15000, 16500],
+                            borderColor: '#2196F3',
+                            backgroundColor: 'rgba(33, 150, 243, 0.1)',
+                            tension: 0.4,
+                            fill: true
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                        },
+                        title: {
+                            display: false
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: 'Sales Volume'
+                            }
+                        }
+                    }
+                }
+            });
+            
+            // 市场份额图
+            const marketShareCtx = document.getElementById('marketShareChart').getContext('2d');
+            const marketShareChart = new Chart(marketShareCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['BYD', 'Tesla', 'Geely', 'Others'],
+                    datasets: [{
+                        data: [45, 15, 12, 28],
+                        backgroundColor: [
+                            '#E94560',
+                            '#0F3460',
+                            '#4CAF50',
+                            '#9E9E9E'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'right',
+                        }
+                    }
+                }
+            });
+            
+            // 能源类型占比图
+            const energyTypeCtx = document.getElementById('energyTypeChart').getContext('2d');
+            const energyTypeChart = new Chart(energyTypeCtx, {
+                type: 'pie',
+                data: {
+                    labels: ['Electric', 'Hybrid', 'Fuel', 'Others'],
+                    datasets: [{
+                        data: [40, 25, 30, 5],
+                        backgroundColor: [
+                            '#2196F3',
+                            '#4CAF50',
+                            '#FF5722',
+                            '#9E9E9E'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'right',
+                        }
+                    }
+                }
+            });
+        });
+        
+        // 批发询价表单功能
+        const textarea = document.getElementById('purchase-details');
+        const charCount = document.getElementById('char-count');
+        const form = document.querySelector('#wholesale-quote form');
+        const formStatus = document.getElementById('form-status');
+        const statusIcon = document.getElementById('status-icon');
+        const statusMessage = document.getElementById('status-message');
+        
+        // 字符计数功能
+        if (textarea && charCount) {
+            textarea.addEventListener('input', () => {
+                const currentLength = textarea.value.length;
+                const maxLength = 500;
+                charCount.textContent = `${currentLength}/${maxLength}`;
+                
+                // 根据字符数更改颜色提示
+                if (currentLength > maxLength - 50) {
+                    charCount.classList.add('text-yellow-500');
+                } else {
+                    charCount.classList.remove('text-yellow-500');
+                }
+                
+                if (currentLength >= maxLength) {
+                    charCount.classList.add('text-accent');
+                    textarea.value = textarea.value.substring(0, maxLength);
+                    charCount.textContent = `${maxLength}/${maxLength}`;
+                } else {
+                    charCount.classList.remove('text-accent');
+                }
+            });
+        }
+        
+        // 实时表单验证
+        const requiredFields = document.querySelectorAll('#wholesale-quote input[required], #wholesale-quote select[required]');
+        if (requiredFields.length > 0) {
+            requiredFields.forEach(field => {
+                field.addEventListener('input', () => { validateField(field); });
+                field.addEventListener('blur', () => { validateField(field); });
+            });
+        }
+        
+        function validateField(field) {
+            const fieldId = field.id;
+            let isValid = true;
+            let errorMessage = '';
+            
+            // 清除之前的错误提示
+            const errorElement = document.getElementById(`${fieldId}-error`);
+            if (errorElement) errorElement.remove();
+            
+            // 移除验证样式
+            field.classList.remove('border-accent', 'border-green-500');
+            
+            if (!field.value.trim()) {
+                isValid = false;
+                errorMessage = 'This field is required';
+            } else if (field.type === 'email') {
+                // 基本邮箱验证
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(field.value)) {
+                    isValid = false;
+                    errorMessage = 'Please enter a valid email address';
+                }
+            }
+            
+            if (!isValid) {
+                field.classList.add('border-accent');
+                const errorDiv = document.createElement('div');
+                errorDiv.id = `${fieldId}-error`;
+                errorDiv.className = 'text-xs text-accent mt-1';
+                errorDiv.textContent = errorMessage;
+                
+                // 插入错误提示到字段之后
+                field.parentNode.insertBefore(errorDiv, field.nextElementSibling);
+            } else {
+                field.classList.add('border-green-500');
+            }
+            
+            return isValid;
+        }
+        
+        // 表单提交处理
+        if (form && formStatus && statusIcon && statusMessage) {
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                
+                // 验证所有必填字段
+                let isFormValid = true;
+                requiredFields.forEach(field => {
+                    if (!validateField(field)) {
+                        isFormValid = false;
+                    }
+                });
+                
+                if (!isFormValid) {
+                    // 显示错误状态
+                    formStatus.classList.remove('hidden', 'bg-green-50', 'border-green-200', 'bg-red-50', 'border-red-200');
+                    formStatus.classList.add('bg-red-50', 'border-red-200');
+                    statusIcon.className = 'fa fa-exclamation-circle text-red-500';
+                    statusMessage.className = 'text-red-500';
+                    statusMessage.textContent = 'Please correct the errors in the form and try again';
+                    return;
+                }
+                
+                // 显示提交中状态
+                formStatus.classList.remove('hidden', 'bg-green-50', 'border-green-200', 'bg-red-50', 'border-red-200');
+                formStatus.classList.add('bg-blue-50', 'border-blue-200');
+                statusIcon.className = 'fa fa-circle-o-notch fa-spin text-blue-500';
+                statusMessage.className = 'text-blue-500';
+                statusMessage.textContent = 'Submitting your request, please wait...';
+                
+                // 模拟提交延迟
+                setTimeout(() => {
+                    // 显示成功状态
+                    formStatus.classList.remove('bg-blue-50', 'border-blue-200');
+                    formStatus.classList.add('bg-green-50', 'border-green-200');
+                    statusIcon.className = 'fa fa-check-circle text-green-500';
+                    statusMessage.className = 'text-green-500';
+                    statusMessage.textContent = 'Success! Our export specialist will contact you within 24 hours';
+                    
+                    // 重置表单
+                    form.reset();
+                    if (charCount) charCount.textContent = '0/500';
+                    
+                    // 清除所有验证样式
+                    requiredFields.forEach(field => {
+                        field.classList.remove('border-green-500', 'border-accent');
+                        const errorElement = document.getElementById(`${field.id}-error`);
+                        if (errorElement) errorElement.remove();
+                    });
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>
